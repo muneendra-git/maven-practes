@@ -6,7 +6,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>  
  
   <groupId>com.w3spoint.application1</groupId>  
-  <artifactId>test-application1</artifactId>  
+  <artifactId>create a war</artifactId>  
   <version>1.0</version>  
   <packaging>jar</packaging>  
  
