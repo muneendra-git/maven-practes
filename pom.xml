@@ -1,29 +1,23 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project>
   ...
-  <build>
-    ...
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>2.6</version>
-          <executions>
-            <execution>
-              <id>pre-process-classes</id>
-              <phase>compile</phase>
-              <goals>
-                <goal>jar</goal>
-              </goals>
-              <configuration>
-                <classifier>pre-process</classifier>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-    ...
-  </build>
+  <dependencies>
+    <dependency>
+      <groupId>group-a</groupId>
+      <artifactId>artifact-a</artifactId>
+      <version>1.0</version>
+      <exclusions>
+        <exclusion>
+          <groupId>group-c</groupId>
+          <artifactId>excluded-artifact</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>group-a</groupId>
+      <artifactId>artifact-b</artifactId>
+      <version>1.0</version>
+      <type>bar</type>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
 </project>
